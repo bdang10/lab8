@@ -11,7 +11,7 @@ $(document).ready(function() {
 function initializePage() {
 	console.log("Page ready");
  	// initCamera();
- 	// initMap();
+ 	 initMap();
  	initGestures();
  	initRSVPForm();
 }
@@ -25,3 +25,10 @@ function initGestures() {
 function initRSVPForm() {
   // add your code here
 }
+
+$(function(){
+	$("div.box").bind("taphold", tapholdHandler);
+	function tapholdHandler(event){
+		$(event.target).addClass("tapHold");
+	}
+});
